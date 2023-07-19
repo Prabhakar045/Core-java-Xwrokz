@@ -1,5 +1,15 @@
 # Core-java-Xwrokz
 
+   -- Java understand Compile time is class and Runtime is Obejct
+   Class--  Class is design or blueprint.
+            Class contains state and behaviour. 
+           state - property, data memebrs, fields, variables
+
+  Object - It instance of class (Instance is a anything we can touch, feel and see)
+           We go with objects bcz to create a multiple copy of a class. (why do we need objects)
+
+
+
 
 
 
