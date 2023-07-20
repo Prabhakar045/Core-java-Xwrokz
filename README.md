@@ -9,7 +9,10 @@
            We go with objects bcz to create a multiple copy of a class. (why do we need objects)
 
 
-
+      new ----
+    -allocates memory , return the address
+    - invoke constructor 
+    - to initialize instance variable of a class 
 
 
 
