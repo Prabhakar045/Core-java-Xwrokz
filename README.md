@@ -55,3 +55,111 @@ Testability: The separation of concerns makes it easier to write unit tests for 
 Scalability: MVC allows for easy scalability and extensibility of the application.
 MVC is widely used in web development frameworks like Spring (Java), Django (Python), Ruby on Rails, and ASP.NET (C#). It is 
 also commonly used in desktop application development and mobile app development.
+
+ 5 -> Rules for encapsulation:
+// 1.Encapsulated class should be public
+// 2.There should be default constructor
+// 3.Private variables/data members/states/fields
+// 4.public getter and setter
+// 5.oops
+
+Keep Data Private: Hide the details of your class by making its data (variables) private. This means that only the methods inside the class can directly access and modify this data. It's like having a secret stash that only certain people (methods) can touch.
+
+Use Getter Methods: If someone needs to see or use the private data, create special methods called "getters." These methods provide a safe way to access the data without letting anyone mess it up. It's like having a security guard who hands you the stuff you want from the secret stash.
+
+Use Setter Methods: If you want to allow outsiders to change the private data, use "setter" methods. These methods make sure that any changes follow the proper rules and don't cause problems. It's like having a butler who takes your changes and adjusts the secret stash while making sure nothing goes wrong.
+
+class Patient1{ 
+	private int patientId;
+	private String patientName;
+	private int age;
+	private String bloodGroup;
+	private String gender;
+	private String address;
+	private long contactNo;
+	private int wardNo;
+	private String attenderName;
+	private String diseaseName;
+	private String consultant;
+	private String hospitalName;
+	private double fees;
+	//getter and setter
+	public void setPatientId(int patientId){
+		this.patientId=patientId;
+	}
+	public int getPatientId(){
+		return patientId;
+	}
+	public void setPatientName(String patientName){
+        this.patientName = patientName;
+    }
+    public String getPatientName(){
+        return patientName;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+    public int getAge(){
+        return age;
+    }
+    public void setBloodGroup(String bloodGroup){
+        this.bloodGroup = bloodGroup;
+    }
+    public String getBloodGroup(){
+        return bloodGroup;
+    }
+    public void setGender(String gender){
+        this.gender = gender;
+    }
+    public String getGender(){
+        return gender;
+    }
+    public void setAddress(String address){
+        this.address = address;
+    }
+    public String getAddress(){
+        return address;
+    }
+    public void setContactNo(long contactNo){
+        this.contactNo = contactNo;
+    }
+    public long getContactNo(){
+        return contactNo;
+    }
+    public void setWardNo(int wardNo){
+        this.wardNo = wardNo;
+    }
+    public int getWardNo(){
+        return wardNo;
+    }
+    public void setAttenderName(String attenderName){
+        this.attenderName = attenderName;
+    }
+    public String getAttenderName(){
+        return attenderName;
+    }
+    public void setDiseaseName(String diseaseName){
+        this.diseaseName = diseaseName;
+    }
+    public String getDiseaseName(){
+        return diseaseName;
+    }
+    public void setConsultant(String consultant){
+        this.consultant = consultant;
+    }
+    public String getConsultant() {
+        return consultant;
+    }
+    public void setHospitalName(String hospitalName){
+        this.hospitalName = hospitalName;
+    }
+    public String getHospitalName(){
+        return hospitalName;
+    }
+    public void setFees(double fees){
+        this.fees = fees;
+    }
+    public double getFees(){
+        return fees;
+    }
+}
