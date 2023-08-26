@@ -71,7 +71,7 @@ class Patient1{
 	private int patientId;
 	private String patientName;
 	private int age;
-	;
+	
 	//getter and setter
 	public void setPatientId(int patientId){
 		this.patientId=patientId;
