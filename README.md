@@ -1,8 +1,6 @@
-# Core-java-Xwrokz
-Software trainee training for java developer role 
-
 
 Encapsulation- The process of grouping tha data into single unit/block (class).
+The main advantage of encapsulation is to secure the data form other method, When you make any data private that data can't be accessible by outside method.
 
 
                    public class BankDTO{
