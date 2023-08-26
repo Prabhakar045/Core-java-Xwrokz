@@ -2,6 +2,9 @@
 Software trainee training for java developer role 
 
 
+Encapsulation- The process of grouping tha data into single unit/block (class).
+
+
                    public class BankDTO{
                           
                               private dataMember,default Constructor, public getter & setter
