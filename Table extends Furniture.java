@@ -1,0 +1,4 @@
+class Table extends Furniture
+{
+
+}

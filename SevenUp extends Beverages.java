@@ -1,0 +1,4 @@
+class SevenUp extends Beverages
+{
+
+}
