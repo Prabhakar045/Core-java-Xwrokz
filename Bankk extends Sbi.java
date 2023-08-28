@@ -1,4 +1,0 @@
-class Bankk extends Sbi
-{
-
-}

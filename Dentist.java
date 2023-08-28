@@ -1,5 +1,0 @@
-class Dentist extends Doctor{
-
-	
-
-}

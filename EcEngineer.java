@@ -1,4 +1,0 @@
-class EcEngineer extends Engineer{
-               
-       
-}
