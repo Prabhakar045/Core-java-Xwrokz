@@ -1,4 +1,8 @@
-[Abstraction --> hiding the implemetaion and allowing the user to access only the gfunctionalities with the help of interface.]
+when to go with , class -> Fully represantation -concrete mehod & with body
+Interface -> Incomplte representation -abstract method-with body
+abstract -> partial representation-concrete&abstract method
+
+[Abstraction --> hiding the implemetaion and allowing the user to access only the functionalities with the help of interface.]
 
 It is achiwed through 2 concepts --> 1.Interface & 2. Abstract class 
 
