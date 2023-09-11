@@ -184,3 +184,25 @@ public class Medical extends  LifeCareMedicals {
         System.out.println("donating money to needy people");
     }
 }
+
+
+
+In the Java programming language, when you have an abstract class that implements an interface, it is not mandatory for the abstract class to provide concrete (non-abstract) implementations for all methods declared in the interface. This is because abstract classes can themselves be incomplete in the sense that they can declare methods as abstract, leaving the responsibility of providing implementations to their concrete subclasses.
+
+In your example, you have the following structure:
+
+Shop Interface:
+
+Defines two abstract methods: doBusiness() and donateMoney().
+LifeCareMedicals Abstract Class:
+
+Extends the Shop interface.
+Provides an empty implementation (an abstract method with no code) for the doBusiness() method.
+Since LifeCareMedicals is declared as an abstract class, it's not required to provide concrete implementations for all methods from the Shop interface. Abstract classes can have abstract methods that are meant to be implemented by concrete subclasses.
+Medical Class:
+
+Extends the LifeCareMedicals abstract class.
+Provides a concrete implementation for the donateMoney() method declared in the Shop interface.
+The key point here is that LifeCareMedicals can be an abstract class that leaves some methods as abstract, and concrete subclasses like Medical are responsible for providing concrete implementations for those abstract methods. This is a fundamental concept in Java's abstraction and inheritance mechanisms, where abstract classes act as a partial blueprint, and concrete subclasses complete the implementation by providing definitions for the remaining abstract methods.
+
+So, it is both possible and a common practice in Java to have abstract classes that don't provide concrete implementations for all interface methods, leaving the responsibility to subclasses to implement those methods as needed.
