@@ -1,182 +1,82 @@
-[Abstraction --> hiding the implemetaion and allowing the user to access only the gfunctionalities with the help of interface.]
 
-It is achiwed through 2 concepts --> 1.Interface & 2. Abstract class 
+collection is Class 
 
-loose coupling -- it is achived trhough interface which should not effect the user 
-[Interface --> Interface is a medium/mediator which is used to communicate between use and device ]
+Collection always store data in the foem of Object only
+Collection internally take care of Arrays 
 
------
+--------------------------------List ---------------------
+It preserve order of insertion
+List is ordered collection of data , it means It preserve order of insertion
+it allow Duplicate values and accepts null values 
 
-1.Interface 
+public class Tester3_List {
 
-public interface Switch  {
-
-    public void sOn();
-    //concreated -- method contains body
-    // Absract method -- does not contain body
-
-    public  void sOff();
-}
-
-
-
-ublic class Tubelight implements Switch{
-
-    @Override
-    public  void sOn(){
-        System.out.println("Tube light turned on");
-    }
-
-    @Override
-    public  void sOff(){
-
-    }
-
-}
-
-
-
-public class LightExecuter {
     public static void main(String[] args) {
-        Switch tubelightSwitch = new Tubelight();
-        //reference will of Switch type or Interface type and object creation of Class type
-        // Abstraction achieved through only interface
-        tubelightSwitch.sOn();
-    }
-}
+
+        //Abstraction
+        // <> Generics helps to add similar type of data
+        // Here ArrayList() is giving implementation
+        List<String> moviesName = new ArrayList<>();
+        //  Collection moviesName = new TreeSet();
+        moviesName.add("KGF");
+        moviesName.add("KGF 2");
+        moviesName.add("pk");
+        moviesName.add("Uppi");
+        moviesName.add("jogi");
+        moviesName.add("om");
+        moviesName.add("Gadar");
+        moviesName.add("Pathan");
+        moviesName.add(3, "pbk");
+        moviesName.add(null);
+        moviesName.add(null);
+        moviesName.add("KGF");
 
 
---------------------------
-2. Abstract class
 
-public abstract class  Switch  {
+        for(Object movies : moviesName){
+            System.out.println(movies);
+        }
 
-    public abstract void sOn();
-    //concreated -- method contains body
-    // Absract method -- does not contain body
-
-    public  abstract void sOff();
-}
-
-
-
-ublic class Tubelight extends Switch{
-
-    @Override
-    public  void sOn(){
-        System.out.println("Tube light turned on");
-    }
-
-    @Override
-    public  void sOff(){
+        System.out.println(moviesName.size());
+        System.out.println(moviesName.remove("jogi"));
+        System.out.println(moviesName.size());
 
     }
 
-}
-
-when you know complete representation of an object then we will go with class and when we dont know complete representation of an object then we will 
-go with interface bcz interface does not have class
-
- classes are used when you have a complete representation of an object, including attributes and methods. Interfaces are used when you want to define a 
-contract without specifying the complete implementation details, allowing multiple classes to adhere to the same contract while providing their own implementations.
-
-Class:
-
-A class is a blueprint for creating objects. It defines the structure and behavior that an object of that class will have.
-When you have a complete representation of an object, including its attributes (data) and methods (behavior), you use a class to define it.
-Objects created from classes have both the structure (fields) and behavior (methods) defined within the class.
-Interface:
-
-An interface defines a contract that classes must adhere to. It specifies a set of methods that any class implementing the interface must provide.
-When you want to define a contract that multiple classes must follow, but you may not know their complete implementations, you use an interface.
-Interfaces do not have the implementation details themselves. They only define the method signatures that must be implemented by classes.
-A class that implements an interface provides the actual implementation of the methods defined in the interface.
 
 
 
-------------------------------------------------------Abstract v/s Interface ----------------------------------------------------
+------------------------Linked List-------------------------------------
+Linked list store data in the form of node.
+It store data randomnly in the memory.
+doubly linked List data Structure fallowed in LinkedList
 
-abstract class contains concrete method ,  abstract method and interface only contains abstract method 
-
-
-// Abstract class
-public abstract class Switch {
-
-    // Concrete method with implementation
-    public void toggle() {
-        System.out.println("Toggle switch");
-    }
-
-    // Abstract method without implementation
-    public abstract void sOn();
-
-    // Abstract method without implementation
-    public abstract void sOff();
-}
-
-// Interface
-interface Dimmable {
-    void dim();
-}
+Adding and deleting element is faster in LikedList comapred to ArrayList
+Every node considered as element 
 
 
+------------------
 
-// Concrete class implementing the Dimmable interface
-public class Tubelight extends Switch implements Dimmable {
+compareTo() -> only used for default values / variables 
 
-    @Override
-    public void sOn() {
-        System.out.println("Tube light turned on");
-    }
-
-    @Override
-    public void sOff() {
-        System.out.println("Tube light turned off");
-    }
-
-    @Override
-    public void dim() {
-        System.out.println("Tube light dimmed");
-    }
-}
-
-// Main class
-public class Main {
-    public static void main(String[] args) {
-        Switch tubelightSwitch = new Tubelight();
-        tubelightSwitch.sOn();
-        tubelightSwitch.toggle();
-
-        Dimmable dimmableTubelight = new Tubelight();
-        dimmableTubelight.dim();
-    }
-}
+Custom sorting ---
+comparator -> custom variable sorting
 
 
+comparable v/s comparator 
+comparable  -> java.lang package  , it has compareTo() method  ** it can be overridden only 1 time to sort Id
+comparator -> java.util ,  it has compare() method    ** i can be overridden multiple time 
 
--------------------------------------
-If class is  not willing to override method then we make it as abstract
-
-public interface Shop {
-
-    public void doBusiness();
-
-    public  void  donateMoney();
-}
+Comparable when you have a single natural ordering/ single variable sorting, and use 
+Comparator when you need custom or multiple sorting options for a class or when you're working with classes you cannot modify.
 
 
-public abstract class LifeCareMedicals implements Shop{
+-------------------Map (I) ------------------
+Set internally use HashMap and it have a Put method 
+Set uses map to store data inn the form of key and value pair 
+Map adding data in the form of entry(INterface)
+Entry is called as Pair of key and Value pair
 
-    @Override
-    public void doBusiness(){
-
-    }
-}
-
-public class Medical extends  LifeCareMedicals {
-
-    @Override
-    public  void donateMoney(){
-        System.out.println("donating money to needy people");
-    }
-}
+--------------------------Iterator (method)---------------------
+process or fetch data from Collection framework interface
+its return type is -> iterator()
